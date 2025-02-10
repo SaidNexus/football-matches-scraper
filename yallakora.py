@@ -25,7 +25,7 @@ def main(page):
             team_B = all_matches[i].find('div',{"class":"teamB"}).text.strip()
             # get score
             match_result = all_matches[i].find('div',{'class':'MResult'}).find_all('span',{'class':'score'})
-            score = f"{match_result[0].text.strip()}  {match_result[1].text.strip()}"
+            score = f"{match_result[0].text.strip()} – {match_result[1].text.strip()}"
 
             # get time
             match_time = all_matches[i].find('div',{'class':'MResult'}).find('span',{'class':'time'}).text.strip()
